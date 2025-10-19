@@ -134,3 +134,27 @@ body {
     letter-spacing: -0.5px;
     font-size: 16px;
 }
+
+/* ------------------------------------------------------------
+   🧱 Button Utilities (Tailwind v4 @utility)
+   ------------------------------------------------------------*/
+
+/* Base button style — shape, shadow, typography */
+@utility btn {
+    @apply rounded-full shadow-md;
+}
+
+/* Primary button (solid red, auto-adjusts for dark mode) */
+@utility btn-primary {
+    @apply bg-Red-700 text-Neutral-0 dark:bg-Red-400 dark:text-Neutral-900 text-preset-4;
+}
+
+/* Outline button (neutral background, border, auto-adjusts for dark mode) */
+@utility btn-outline {
+    @apply bg-Neutral-0 text-Neutral-900 border border-Neutral-200 dark:bg-Neutral-700 dark:text-Neutral-0 dark:border-Neutral-600 text-preset-3;
+}
+
+/* Button sizes — mobile first */
+@utility btn-sm {
+    @apply px-5 pt-2 pb-2.5;
+}
