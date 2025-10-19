@@ -18,16 +18,24 @@
     --color-Red-500: #DE4840;
     --color-Red-700: #C7231A;
 
+    /* Gradients */
+    --gradient-light: linear-gradient(180deg, #EBF2FC 0%, #EEFBF9 100%);
+    --gradient-dark: linear-gradient(180deg, #04091B 0%, #091540 100%);
+
 
     /* Typography */
-
     --font-sans: "Noto Sans", sans-serif;
 
 }
 
 body {
-    background: var(--color-Neutral-900);
+    background: var(--gradient-light);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* fill the screen */
+    background-size: cover;
 }
+
 
 /* ------------------------------------------------------------
    🔠 Font imports
@@ -64,49 +72,55 @@ body {
    ------------------------------------------------------------*/
 
 @utility text-preset-1 {
-  font-family: var(--font-sans);
-  font-weight: 700;            /* Bold */
-  line-height: 100%;
-  letter-spacing: -1px;
-  font-size: 34px;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    /* Bold */
+    line-height: 100%;
+    letter-spacing: -1px;
+    font-size: 34px;
 }
 
 @utility text-preset-2 {
-  font-family: var(--font-sans);
-  font-weight: 700;            /* Bold */
-  line-height: 120%;
-  letter-spacing: -0.2px;
-  font-size: 20px;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    /* Bold */
+    line-height: 120%;
+    letter-spacing: -0.2px;
+    font-size: 20px;
 }
 
 @utility text-preset-3 {
-  font-family: var(--font-sans);
-  font-weight: 400;            /* Regular */
-  line-height: 140%;
-  letter-spacing: -0.3px;
-  font-size: 20px;
+    font-family: var(--font-sans);
+    font-weight: 400;
+    /* Regular */
+    line-height: 140%;
+    letter-spacing: -0.3px;
+    font-size: 20px;
 }
 
 @utility text-preset-4 {
-  font-family: var(--font-sans);
-  font-weight: 500;            /* Medium */
-  line-height: 140%;
-  letter-spacing: -0.3px;
-  font-size: 20px;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    /* Medium */
+    line-height: 140%;
+    letter-spacing: -0.3px;
+    font-size: 20px;
 }
 
 @utility text-preset-5 {
-  font-family: var(--font-sans);
-  font-weight: 400;            /* Regular */
-  line-height: 140%;
-  letter-spacing: -0.5px;
-  font-size: 16px;
+    font-family: var(--font-sans);
+    font-weight: 400;
+    /* Regular */
+    line-height: 140%;
+    letter-spacing: -0.5px;
+    font-size: 16px;
 }
 
 @utility text-preset-6 {
-  font-family: var(--font-sans);
-  font-weight: 500;            /* Medium */
-  line-height: 140%;
-  letter-spacing: -0.5px;
-  font-size: 16px;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    /* Medium */
+    line-height: 140%;
+    letter-spacing: -0.5px;
+    font-size: 16px;
 }
