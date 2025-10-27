@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Filter from "./components/Filter";
+import Extensions from "./components/Extensions";
 
 function App() {
   /* -------------------------- 🌙 DARK MODE LOGIC -------------------------- */
@@ -32,6 +33,7 @@ function App() {
       <section>
         <Header onToggleTheme={toggleTheme} />
         <Filter />
+        <Extensions />
       </section>
     </>
   );

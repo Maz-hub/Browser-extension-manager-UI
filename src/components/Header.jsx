@@ -1,7 +1,7 @@
-import LogoLight from "../assets/images/logo-light.svg";
-import LogoDark from "../assets/images/logo-dark.svg";
-import SunIcon from "../assets/images/icon-sun.svg";
-import MoonIcon from "../assets/images/icon-moon.svg";
+import LogoLight from "/images/logo-light.svg";
+import LogoDark from "/images/logo-dark.svg";
+import SunIcon from "/images/icon-sun.svg";
+import MoonIcon from "/images/icon-moon.svg";
 
 const Header = ({ onToggleTheme }) => {
   return (
