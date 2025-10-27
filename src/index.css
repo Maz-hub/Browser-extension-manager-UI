@@ -35,7 +35,25 @@ body {
     background-attachment: fixed;
     /* fill the screen */
     background-size: cover;
-    padding: 20px 16px;
+    padding: 1.5rem 1rem;
+    /* Mobile base */
+}
+
+@media (min-width: 768px) {
+
+    /* Tablet */
+    body {
+        padding: 2rem 3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    /* Desktop */
+    body {
+        padding: 2.5rem 8.5rem 4rem;
+        /* top, left/right, bottom */
+    }
 }
 
 .dark body {

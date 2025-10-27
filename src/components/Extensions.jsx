@@ -7,13 +7,13 @@ const Extensions = () => {
 
   return (
     <section>
-      <div className="mb-16">
+      <div className="mb-16 md:grid grid-cols-2 md:gap-3 lg:grid-cols-3">
         {extensions.map((item) => (
           <article
             key={item.name}
-            className="bg-Neutral-0 mb-3 p-5 rounded-[20px] border-1 border-Neutral-200 shadow-sm"
+            className="bg-Neutral-0 mb-3 md:mb-0 p-5 rounded-[20px] border-1 border-Neutral-200 shadow-sm  "
           >
-            <div className="flex items-start mb-6">
+            <div className="flex items-start mb-6 ">
               <img
                 src={item.logo}
                 alt={item.name}
