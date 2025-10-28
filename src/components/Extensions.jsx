@@ -7,13 +7,13 @@ const Extensions = () => {
 
   return (
     <section>
-      <div className="mb-16 md:grid grid-cols-2 md:gap-3 lg:grid-cols-3">
+      <div className="mb-16 md:grid grid-cols-2 md:gap-3 lg:grid-cols-3 md:items-stretch">
         {extensions.map((item) => (
           <article
             key={item.name}
-            className="bg-Neutral-0 mb-3 md:mb-0 p-5 rounded-[20px] border-1 border-Neutral-200 shadow-sm  "
+            className="bg-Neutral-0 mb-3 md:mb-0 p-5 rounded-[20px] border-1 border-Neutral-200 shadow-sm flex flex-col h-full  "
           >
-            <div className="flex items-start mb-6 ">
+            <div className="flex items-start mb-6 lg:mb-11.5 ">
               <img
                 src={item.logo}
                 alt={item.name}
@@ -27,7 +27,7 @@ const Extensions = () => {
               </div>
             </div>
             {/* button & toggle */}
-            <div className="flex justify-between">
+            <div className="flex justify-between items-center mt-auto">
               <button className="text-preset-6 text-Neutral-900 px-4 py-2 border-1 border-Neutral-300 rounded-full">
                 Remove
               </button>
