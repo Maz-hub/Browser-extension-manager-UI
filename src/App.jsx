@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
+import extensionsData from "./data/data.json";
 import Header from "./components/Header";
 import Filter from "./components/Filter";
 import Extensions from "./components/Extensions";
 
 function App() {
-  /* -------------------------- 🌙 DARK MODE LOGIC -------------------------- */
+  /* -------------------------- 🌙 DARK MODE -------------------------- */
 
   // Keeps track of whether dark mode is currently active or not
   const [isDark, setIsDark] = useState(false);
@@ -28,12 +29,30 @@ function App() {
     localStorage.setItem("theme", isDark ? "dark" : "light");
   }, [isDark]);
 
+  /* ---------------------------------------------------------------------- */
+
+  const [filter, setFilter] = useState("all");
+  const [extensions, setExtensions] = useState(extensionsData);
+
+  const filterExtensions = (list, filter) => {
+    switch (filter) {
+      case "active":
+        return list.filter((e) => e.isActive);
+      case "inactive":
+        return list.filter((e) => !e.isActive);
+      default:
+        return list; //all
+    }
+  };
+
+  const visible = filterExtensions(extensions, filter);
+
   return (
     <>
       <section>
         <Header onToggleTheme={toggleTheme} />
-        <Filter />
-        <Extensions />
+        <Filter activeFilter={filter} onChangeFilter={setFilter} />
+        <Extensions items={visible} />
       </section>
     </>
   );

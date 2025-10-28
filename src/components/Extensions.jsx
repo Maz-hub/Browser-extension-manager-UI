@@ -1,7 +1,7 @@
 import extensionsData from "../data/data.json";
 import { useState } from "react";
 
-const Extensions = () => {
+const Extensions = ({items}) => {
   const [extensions, setExtensions] = useState(extensionsData);
   // const [isActive, setIsActive] = useState(item.isActive);
 
