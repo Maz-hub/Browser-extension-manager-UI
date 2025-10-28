@@ -8,7 +8,7 @@ const Filter = ({ activeFilter, onChangeFilter }) => {
         <div className="flex justify-around md:gap-3 ">
           <button
             onClick={() => onChangeFilter("all")}
-            className={`btn btn-sm cursor-pointer ${
+            className={`btn btn-sm cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-Red-700  ${
               activeFilter === "all" ? "btn-primary" : "btn-outline"
             }`}
           >
@@ -16,7 +16,7 @@ const Filter = ({ activeFilter, onChangeFilter }) => {
           </button>
           <button
             onClick={() => onChangeFilter("active")}
-            className={`btn btn-sm cursor-pointer ${
+            className={`btn btn-sm cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-Red-700 ${
               activeFilter === "active" ? "btn-primary" : "btn-outline"
             }`}
           >
@@ -24,7 +24,7 @@ const Filter = ({ activeFilter, onChangeFilter }) => {
           </button>
           <button
             onClick={() => onChangeFilter("inactive")}
-            className={`btn btn-sm cursor-pointer ${
+            className={`btn btn-sm cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-Red-700 ${
               activeFilter === "inactive" ? "btn-primary" : "btn-outline"
             }`}
           >

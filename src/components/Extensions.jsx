@@ -1,4 +1,3 @@
-
 const Extensions = ({ items }) => {
   // const [isActive, setIsActive] = useState(item.isActive);
 
@@ -25,7 +24,7 @@ const Extensions = ({ items }) => {
             </div>
             {/* button & toggle */}
             <div className="flex justify-between items-center mt-auto">
-              <button className="text-preset-6 text-Neutral-900 px-4 py-2 border-1 border-Neutral-300 rounded-full">
+              <button className="text-preset-6 text-Neutral-900 px-4 py-2 border-1 border-Neutral-300 rounded-full focus:outline-2 focus:outline-offset-2 focus:outline-Red-700">
                 Remove
               </button>
 
@@ -35,7 +34,10 @@ const Extensions = ({ items }) => {
                   defaultChecked={item.isActive}
                   className="sr-only peer"
                 />
-                <div className="relative w-9 h-5 bg-Neutral-300 rounded-full peer peer-focus:ring-4 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-Neutral-0 after:shadow-sm after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-Red-700"></div>
+                <div
+                  className="relative w-9 h-5 bg-Neutral-300 rounded-full peer peer-focus:outline-2 peer-focus:outline-offset-2 peer-focus:outline-Red-700
+ peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-Neutral-0 after:shadow-sm after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-Red-700"
+                ></div>
               </label>
             </div>
           </article>
