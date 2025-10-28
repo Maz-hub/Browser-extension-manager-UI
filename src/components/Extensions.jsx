@@ -1,14 +1,11 @@
-import extensionsData from "../data/data.json";
-import { useState } from "react";
 
-const Extensions = ({items}) => {
-  const [extensions, setExtensions] = useState(extensionsData);
+const Extensions = ({ items }) => {
   // const [isActive, setIsActive] = useState(item.isActive);
 
   return (
     <section>
       <div className="mb-16 md:grid grid-cols-2 md:gap-3 lg:grid-cols-3 md:items-stretch">
-        {extensions.map((item) => (
+        {items.map((item) => (
           <article
             key={item.name}
             className="bg-Neutral-0 mb-3 md:mb-0 p-5 rounded-[20px] border-1 border-Neutral-200 shadow-sm flex flex-col h-full  "

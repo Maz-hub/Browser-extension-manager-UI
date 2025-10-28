@@ -46,6 +46,8 @@ function App() {
   };
 
   const visible = filterExtensions(extensions, filter);
+  console.log('filter:', filter, 'visible:', visible.length);
+
 
   return (
     <>
