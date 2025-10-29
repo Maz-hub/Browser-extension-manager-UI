@@ -15,7 +15,7 @@ const Header = ({ onToggleTheme }) => {
         {/* Light Theme Button */}
         <button
           aria-label="Switch to dark mode"
-          className="block dark:hidden p-3.5 bg-Neutral-100 rounded-xl cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-Red-700"
+          className="block dark:hidden p-3.5 bg-Neutral-100 rounded-xl cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-Red-700 hover:bg-Neutral-300"
           onClick={onToggleTheme}
         >
           <img
@@ -30,7 +30,7 @@ const Header = ({ onToggleTheme }) => {
 
         <button
           aria-label="Switch to light mode"
-          className=" hidden dark:block p-3.5 bg-Neutral-700 rounded-md cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-Red-700"
+          className=" hidden dark:block p-3.5 bg-Neutral-700 rounded-md cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-Red-700 hover:bg-Neutral-600"
           onClick={onToggleTheme}
         >
           <img
