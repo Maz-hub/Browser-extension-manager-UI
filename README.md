@@ -1,16 +1,66 @@
-# React + Vite
+# 🧩 Browser Extension Manager UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React application built as a **Frontend Mentor – Junior Challenge**.  
+The project simulates a browser extension manager where users can toggle, filter, remove, and theme their extensions.  
 
-Currently, two official plugins are available:
+This challenge helped me strengthen my understanding of **state management**, **derived data**, **conditional rendering**, **component composition**, and **responsive design with Tailwind CSS v4**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🎯 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+✅ **Dynamic Data**
+- The extensions are fetched from a local `data.json` file and rendered dynamically.
 
-## Expanding the ESLint configuration
+✅ **Filtering**
+- Users can filter between **All**, **Active**, and **Inactive** extensions.  
+- Filtering is managed through derived state logic - no redundant state is stored.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+✅ **Toggle Activation**
+- Each extension can be toggled between *active* and *inactive*.
+- The toggle state updates immediately and affects the filtered view.
+
+✅ **Remove Extensions**
+- Extensions can be removed from the list with an immutable state update.
+- A smooth fade animation plays before removal using [AutoAnimate](https://github.com/formkit/auto-animate).
+
+✅ **Color Theme**
+- Includes a **light/dark mode toggle**.
+- The theme preference is stored in `localStorage` and persists across sessions.
+
+✅ **Hover & Focus States**
+- All interactive elements include hover, focus, and keyboard-visible outlines.  
+- Uses a consistent red accent for accessibility and clarity.
+
+✅ **Motion-Safe Animations**
+- AutoAnimate handles card entry/removal transitions.
+- Respects users’ `prefers-reduced-motion` settings.
+
+---
+
+## 🧠 What I Practiced
+
+- Building reusable UI components with props (`Header`, `Filter`, `Extensions`)
+- Lifting state up and passing actions down via props
+- Deriving visible data from existing state (`filterExtensions()` function)
+- Managing immutable updates with `.filter()` and `.map()`
+- Applying dark/light themes with Tailwind v4 custom tokens and variants
+- Handling focus, hover, and selected states in both themes
+- Integrating [@formkit/auto-animate](https://github.com/formkit/auto-animate) for motion
+- Writing responsive layouts using Tailwind’s `md:` and `lg:` breakpoints
+- Practicing clean commit messages and incremental development
+
+---
+
+## 🛠️ Tech Stack
+
+- **React + Vite**
+- **Tailwind CSS v4**
+- **AutoAnimate** (for add/remove animations)
+- **Frontend Mentor design & assets (Figma)**
+- **Local data.json** for dynamic rendering
+
+---
+## 🔗 Live Site
+
+[View Live Site](https://maz-hub.github.io/browser-extension-manager-ui/)
