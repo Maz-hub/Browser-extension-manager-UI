@@ -46,15 +46,18 @@ function App() {
   };
 
   const visible = filterExtensions(extensions, filter);
-  console.log('filter:', filter, 'visible:', visible.length);
+  console.log("filter:", filter, "visible:", visible.length);
 
+  const removeExtension = (name) => {
+    setExtensions((prev) => prev.filter((ext) => ext.name !== name));
+  };
 
   return (
     <>
       <section>
         <Header onToggleTheme={toggleTheme} />
         <Filter activeFilter={filter} onChangeFilter={setFilter} />
-        <Extensions items={visible} />
+        <Extensions items={visible} onRemove={removeExtension} />
       </section>
     </>
   );

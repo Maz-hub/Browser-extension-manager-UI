@@ -1,9 +1,14 @@
-const Extensions = ({ items }) => {
-  // const [isActive, setIsActive] = useState(item.isActive);
+import { useAutoAnimate } from "@formkit/auto-animate/react";
+
+const Extensions = ({ items, onRemove }) => {
+  const [parent] = useAutoAnimate({ duration: 200 });
 
   return (
     <section>
-      <div className="mb-16 md:grid grid-cols-2 md:gap-3 lg:grid-cols-3 md:items-stretch">
+      <div
+        ref={parent}
+        className="mb-16 md:grid grid-cols-2 md:gap-3 lg:grid-cols-3 md:items-stretch"
+      >
         {items.map((item) => (
           <article
             key={item.name}
@@ -26,7 +31,10 @@ const Extensions = ({ items }) => {
             </div>
             {/* button & toggle */}
             <div className="flex justify-between items-center mt-auto">
-              <button className="text-preset-6 text-Neutral-900 dark:text-Neutral-0 px-4 py-2 border-1 border-Neutral-300 dark:border-Neutral-600 rounded-full focus:outline-2 focus:outline-offset-2 focus:outline-Red-700 hover:bg-Red-700 hover:border-Red-700 hover:text-Neutral-0 dark:hover:bg-Red-400 dark:hover:border-Red-400 dark:hover:text-Neutral-900">
+              <button
+                onClick={() => onRemove(item.name)}
+                className="text-preset-6 text-Neutral-900 dark:text-Neutral-0 px-4 py-2 border-1 border-Neutral-300 dark:border-Neutral-600 rounded-full focus:outline-2 focus:outline-offset-2 focus:outline-Red-700 hover:bg-Red-700 hover:border-Red-700 hover:text-Neutral-0 dark:hover:bg-Red-400 dark:hover:border-Red-400 dark:hover:text-Neutral-900"
+              >
                 Remove
               </button>
 
